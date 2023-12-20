@@ -1,3 +1,67 @@
+// Function to increment the number with animation
+var speed = 26;
+function incEltNbr(id) {
+  elt = document.getElementById(id);
+  endNbr = Number(document.getElementById(id).innerHTML);
+  incNbrRec(0, endNbr, elt);
+}
+
+// Recursive function for number incrementation
+function incNbrRec(i, endNbr, elt) {
+  if (i <= endNbr) {
+    elt.innerHTML = i;
+    setTimeout(function () {
+      // Delay a bit before calling the function again.
+      incNbrRec(i + 1, endNbr, elt);
+    }, speed);
+  }
+}
+
+// Function to be called when the target element is in view
+function handleIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log("Target is in view!");
+      incEltNbr(entry.target.id);
+    }
+  });
+}
+
+// Create an intersection observer with the callback function
+const observer = new IntersectionObserver(handleIntersection);
+
+// Target the elements you want to observe
+const targetElements = document.querySelectorAll(".nbr");
+
+// Start observing each target element
+targetElements.forEach((element) => {
+  observer.observe(element);
+});
+
+// Code for counting page views with animation
+var counterContainer = document.querySelector(".website-counter");
+var pageViews = document.getElementById("page-views");
+var visitCount = localStorage.getItem("page_view");
+
+// Function for animating page views incrementation
+function incPageViews() {
+  var currentViews = Number(pageViews.textContent);
+  incNbrRec(visitCount, currentViews, pageViews);
+}
+
+// Check if page_view entry is present
+if (visitCount) {
+  visitCount = Number(visitCount) + 1;
+  localStorage.setItem("page_view", visitCount);
+} else {
+  visitCount = 55;
+  localStorage.setItem("page_view", 55);
+}
+pageViews.textContent = visitCount;
+
+// Call the function to animate page views incrementation
+incPageViews();
+
 (function () {
   "use strict";
 

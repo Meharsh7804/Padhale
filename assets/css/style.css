@@ -527,6 +527,38 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Counters section
+--------------------------------------------------------------*/
+#counter .container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -7vh;
+}
+
+#counter .container .nbr {
+  font-family: "Jost", sans-serif;
+  font-size: 42px;
+  margin: 2vh 0 0 0;
+}
+
+#counter .container .mini {
+  font-family: "Jost", sans-serif;
+  font-size: 42px;
+  margin: 2vh 0 0 0;
+}
+
+#counter .container .vert-line {
+  height: 150px;
+  width: 2px;
+  background-color: #47b2e4;
+}
+
+#counter .container .mini-counter {
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
 .about .content h3 {
