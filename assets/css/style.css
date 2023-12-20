@@ -558,6 +558,30 @@ section {
   align-items: center;
 }
 
+@media (max-width: 990px) {
+  #counter .container {
+    flex-direction: column;
+  }
+
+  .mini-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .website-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vert-line {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
