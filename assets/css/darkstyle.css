@@ -234,7 +234,7 @@ body {
   * Mobile Navigation 
   */
 .mobile-nav-toggle {
-  background:#010101;
+  background: #010101;
   color: #3bd0f2;
   font-size: 28px;
   cursor: pointer;
@@ -284,7 +284,7 @@ body {
   left: 15px;
   padding: 10px 0;
   border-radius: 10px;
-  background-color:#070b13e6;
+  background-color: #070b13e6;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -524,6 +524,40 @@ section {
 
 .section-title p {
   margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Counters section
+--------------------------------------------------------------*/
+#counter .container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -7vh;
+}
+
+#counter .container .nbr {
+  font-family: "Jost", sans-serif;
+  font-size: 42px;
+  color: #f5df60;
+  margin: 2vh 0 0 0;
+}
+
+#counter .container .mini {
+  font-family: "Jost", sans-serif;
+  font-size: 42px;
+  color: #f5df60;
+  margin: 2vh 0 0 0;
+}
+
+#counter .container .vert-line {
+  height: 150px;
+  width: 2px;
+  background-color: #47b2e4;
+}
+
+#counter .container .mini-counter {
+  justify-content: center;
+  align-items: center;
 }
 
 /*--------------------------------------------------------------
@@ -802,7 +836,11 @@ section {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
-  background-image: linear-gradient(to right,rgb(26, 26, 26),rgba(84, 84, 84, 0.251));
+  background-image: linear-gradient(
+    to right,
+    rgb(26, 26, 26),
+    rgba(84, 84, 84, 0.251)
+  );
   border-radius: 20px;
 }
 
